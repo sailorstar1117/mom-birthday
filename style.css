@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf8f5;
+    color: #3f3a36;
+}
+
+.page {
+    min-height: 100vh;
+    position: relative;
+}
+
+.screen {
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.small-text {
+    font-size: 14px;
+    color: #9a8f87;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #746b65;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+button {
+    border: none;
+    background: #3f3a36;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+.letter {
+    max-width: 700px;
+    width: 100%;
+    background: #fffdf9;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(63, 58, 54, 0.08);
+}
+
+.letter-date {
+    font-size: 14px;
+    color: #9a8f87;
+    margin-bottom: 25px;
+}
+
+.letter h1 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.letter-text {
+    text-align: right;
+    line-height: 2.2;
+    color: #5c554f;
+    font-size: 16px;
+}
+
+.letter-text p {
+    margin-bottom: 25px;
+}
+
+.letter button {
+    margin-top: 15px;
+}
+.final-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.final-small {
+    font-size: 14px;
+    color: #9a8f87;
+    margin-bottom: 30px;
+}
+
+.flower {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.final-content h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.final-message {
+    font-size: 18px;
+    line-height: 2;
+    color: #746b65;
+    margin-bottom: 30px;
+}
+
+.final-love {
+    font-size: 22px;
+    margin-bottom: 35px;
+}
+
+.signature {
+    font-size: 15px;
+    color: #9a8f87;
+}
+.mom-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px auto 30px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(63, 58, 54, 0.12);
+}
+.screen.active .content,
+.screen.active .letter,
+.screen.active .final-content {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.screen.active .mom-photo {
+    animation: photoAppear 1s ease forwards;
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.letter {
+    position: relative;
+    border: 1px solid #eee7e0;
+    box-shadow: 0 15px 45px rgba(63, 58, 54, 0.07);
+}
+
+.letter::before {
+    content: "♡";
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 20px;
+    color: #c9bdb4;
+}
+
+.letter-text p:first-child {
+    font-size: 20px;
+    color: #3f3a36;
+    font-weight: 500;
+}
+
+.letter-text p:last-child {
+    text-align: center;
+    font-size: 19px;
+    color: #6f625a;
+    margin-top: 35px;
+}
+.letter-date::before {
+    content: "✦ ";
+    color: #b9aaa0;
+}
+
+.letter-date::after {
+    content: " ✦";
+    color: #b9aaa0;
+}
+.flower {
+    animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+.final-message {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-love {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+
+    .page {
+        padding: 20px;
+    }
+
+    .screen {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .small-text {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 13px 26px;
+    }
+
+    .mom-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .letter {
+        padding: 30px 22px;
+    }
+
+    .letter h1 {
+        font-size: 27px;
+    }
+
+    .letter-text {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .letter-text p:first-child {
+        font-size: 18px;
+    }
+
+    .final-content h1 {
+        font-size: 32px;
+    }
+
+    .final-message {
+        font-size: 16px;
+    }
+
+    .flower {
+        font-size: 45px;
+    }
+}
